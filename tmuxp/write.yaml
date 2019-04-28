@@ -1,0 +1,10 @@
+session_name: write
+windows:
+- window_name: main
+  layout: main-vertical
+  options:
+    main-pane-width: 120
+  panes:
+    - vim ~/Documents/Reports/IT/itReport.rst
+    - cd ~/Documents/Reports/IT/
+    - null
