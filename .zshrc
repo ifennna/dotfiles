@@ -8,9 +8,6 @@ SAVEHIST=100000
 # vim bindings
 bindkey -v
 
-# load server aliases
-source ~/.servers
-
 #load aliases, functions, exports
 
 source ~/.aliases
