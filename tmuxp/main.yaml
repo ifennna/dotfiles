@@ -1,8 +1,0 @@
-session_name: main
-windows:
-- window_name: IDE
-  layout: main-vertical
-  panes:
-    - null
-    - null
-    - null
