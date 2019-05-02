@@ -80,6 +80,7 @@ alias free_diskspace_report="diskspace_report"
 alias g="git"
 alias vim="nvim"
 alias v="vim"
+alias grep="rg"  # ripgrep
 alias ungz="gunzip -k"
 
 # File size
