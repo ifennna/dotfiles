@@ -40,14 +40,24 @@ call plug#begin('~/.vim/plugs')
 " https://github.com/arcticicestudio/nord-vim
 Plug 'arcticicestudio/nord-vim'
 
-" semantic-based completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
+" denite
+Plug 'Shougo/denite.nvim'
+
+" Intellisense Engine
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " JavaScript Highlight & Improved Indentation
 Plug 'pangloss/vim-javascript'
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Icons
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Git info in the gutter
+Plug 'mhinz/vim-signify'
 
 " Lisp dev environment
 Plug 'l04m33/vlime', { 'do': 'clisp vlime/lisp/start-vlime.lisp' }

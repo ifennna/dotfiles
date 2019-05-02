@@ -91,7 +91,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # Load default dotfiles
 #source ~/.bash_profile
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 
 SPACESHIP_VI_MODE_SHOW=false
 
@@ -103,3 +103,5 @@ if [ -f /home/ifenna/.tnsrc ]; then
     source /home/ifenna/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
