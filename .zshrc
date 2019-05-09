@@ -5,6 +5,13 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # history
 SAVEHIST=100000
 
+# TMUX
+# Automatically start tmux
+ZSH_TMUX_AUTOSTART=true
+
+# Automatically connect to a previous session if it exists
+ZSH_TMUX_AUTOCONNECT=true
+
 # vim bindings
 bindkey -v
 
@@ -28,7 +35,8 @@ if ! zgen saved; then
   zgen oh-my-zsh
   zgen oh-my-zsh plugins/command-not-found
   zgen oh-my-zsh plugins/z
-  
+  zgen oh-my-zsh plugins/tmux
+
   zgen load zsh-users/zsh-syntax-highlighting
 
   zgen loadall <<EOPLUGINS
