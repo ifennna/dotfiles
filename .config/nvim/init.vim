@@ -53,6 +53,9 @@ Plug 'mhinz/vim-signify'
 " Lisp dev environment
 Plug 'l04m33/vlime', { 'do': 'clisp vlime/lisp/start-vlime.lisp' }
 
+" RestructuredText editing and preview
+Plug 'rykka/riv.vim'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
