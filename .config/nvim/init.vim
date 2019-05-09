@@ -16,6 +16,7 @@ let g:mapleader=','
 
 set title " Show the filename in the window titlebar
 set undofile " Persistent Undo
+set noshowmode " dont need this since we have a statusline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
@@ -26,6 +27,9 @@ call plug#begin('~/.vim/plugs')
 " nord colorscheme, get their term colorscheme from 
 " https://github.com/arcticicestudio/nord-vim
 Plug 'arcticicestudio/nord-vim'
+
+" nice status line
+Plug 'itchyny/lightline.vim'
 
 " denite
 Plug 'Shougo/denite.nvim'
@@ -126,6 +130,10 @@ catch
   echo 'Denite not installed. It should work after running :PlugInstall'
 endtry
 
+" ligtline config
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VISUAL CONFIG
