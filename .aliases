@@ -81,6 +81,7 @@ alias vim="nvim"
 alias v="vim"
 alias grep="rg"  # ripgrep
 alias ungz="gunzip -k"
+alias pg="sudo -u postgres"
 
 # File size
 alias fs="stat -f \"%z bytes\""
