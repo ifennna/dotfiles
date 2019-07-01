@@ -1,6 +1,5 @@
-# tmux sessions
-alias main="~/.local/bin/tmuxp load main"
-alias write="~/.local/bin/tmuxp load write"
+# colorful package management
+alias yay="yay --color=auto"
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."

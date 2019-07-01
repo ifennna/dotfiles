@@ -20,11 +20,12 @@ export DISABLE_AUTO_TITLE='true'
 
 
 export PATH="$PATH:/home/ifenna/.npm/bin"
-#export PATH='$PATH:/home/ifenna/.local/bin'
+export PATH="$PATH:/home/ifenna/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
 #export PATH="$PATH:~/go/bin"
 #export PATH="$PATH:~/.composer/vendor/bin"
 
 #export GOPATH="$HOME/go"
+export GOBIN="$HOME/.local/bin"
 
 export PATH="$HOME/.cargo/bin:$PATH" 
