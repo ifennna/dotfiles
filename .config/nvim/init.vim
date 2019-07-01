@@ -14,6 +14,9 @@ set undodir=~/.local/share/nvim/undo
 " Remap leader key to ,
 let g:mapleader=','
 
+" Speed up vue syntax recognition
+let g:vue_disable_pre_processors=1
+
 set title " Show the filename in the window titlebar
 set undofile " Persistent Undo
 set noshowmode " dont need this since we have a statusline
@@ -37,8 +40,11 @@ Plug 'Shougo/denite.nvim'
 " Intellisense Engine
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-" JavaScript Highlight & Improved Indentation
-Plug 'pangloss/vim-javascript'
+" JavaScript Highlighting
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
+
+" Vue js syntax highlighting
+" Plug 'posva/vim-vue'
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -155,6 +161,13 @@ colorscheme nord
 " set line numbers
 set relativenumber
 set number
+
+" sensible tab settings
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+set smarttab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY BINDINGS
