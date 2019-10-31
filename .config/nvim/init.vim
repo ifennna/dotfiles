@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugs')
 
 " nord colorscheme, get their term colorscheme from 
 " https://github.com/arcticicestudio/nord-vim
-Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
 
 " nice status line
 Plug 'itchyny/lightline.vim'
@@ -141,7 +141,7 @@ endtry
 
 " ligtline config
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'one',
       \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -151,12 +151,15 @@ let g:lightline = {
 " set 256 colors
 set t_Co=256
 
-" allow italic comments
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
+" allow italics
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_termcolors = 256
+let g:onedark_terminal_italics = 1
 
 " set colorscheme
-colorscheme nord
+colorscheme onedark
+
+set termguicolors
 
 " set line numbers
 set relativenumber
