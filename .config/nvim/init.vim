@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugs')
 
 " nord colorscheme, get their term colorscheme from 
 " https://github.com/arcticicestudio/nord-vim
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 
 " nice status line
 Plug 'itchyny/lightline.vim'
@@ -152,12 +152,11 @@ let g:lightline = {
 set t_Co=256
 
 " allow italics
-let g:onedark_hide_endofbuffer = 1
-let g:onedark_termcolors = 256
-let g:onedark_terminal_italics = 1
+let g:one_allow_italics = 1
 
 " set colorscheme
-colorscheme onedark
+colorscheme one
+set background=dark
 
 set termguicolors
 

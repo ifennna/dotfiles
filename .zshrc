@@ -15,11 +15,6 @@ ZSH_TMUX_AUTOCONNECT=true
 # vim bindings
 bindkey -v
 
-#load aliases, functions, exports
-
-source ~/.aliases
-source ~/.exports
-source ~/.functions
 
 fpath=( "$HOME/.zfunctions" $fpath )
 
@@ -47,7 +42,7 @@ EOPLUGINS
   zgen load tarruda/zsh-autosuggestions
 
   # colors for all files!
-  zgen load trapd00r/zsh-syntax-highlighting-filetypes
+  #zgen load trapd00r/zsh-syntax-highlighting-filetypes
 
   zgen load mafredri/zsh-async
   zgen load denysdovhan/spaceship-prompt #$b sindresorhus/pure
@@ -103,6 +98,10 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 
 SPACESHIP_VI_MODE_SHOW=false
 
+#load aliases, functions, exports
+source ~/.aliases
+source ~/.exports
+source ~/.functions
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
