@@ -1,0 +1,152 @@
+/* // Dark Background */
+/* $gb-dm-bg0: #16161c; */
+/* $gb-dm-bg0-hard: #16161c; */
+/* $gb-dm-bg0-soft: #1a1c23; */
+/* $gb-dm-bg1: #1c1e26; */
+/* $gb-dm-bg2: #232530; */
+/* $gb-dm-bg3: #2e303e; */
+/* $gb-dm-bg4: #6c6f93; */
+
+/* // Dark Foreground */
+/* $gb-dm-fg0: #fdf0ed; */
+/* $gb-dm-fg1: #fdf0ed; */
+/* $gb-dm-fg2: #fadad1; */
+/* $gb-dm-fg3: #f9cbbe; */
+/* $gb-dm-fg4: #f9cec3; */
+
+/* // Dark Colors */
+/* $gb-dm-dark-red: #E95678; */
+/* $gb-dm-dark-green: #29D398; */
+/* $gb-dm-dark-yellow: #FAB795; */
+/* $gb-dm-dark-blue: #26BBD9; */
+/* $gb-dm-dark-purple: #EE64AE; */
+/* $gb-dm-dark-aqua: #59E3E3; */
+/* $gb-dm-dark-orange: #EE64AE; */
+/* $gb-dm-dark-gray: #1A1C23; */
+
+/* $gb-dm-light-red: #EC6A88; */
+/* $gb-dm-light-green: #3FDAA4; */
+/* $gb-dm-light-yellow: #FBC3A7; */
+/* $gb-dm-light-blue: #3FC6DE; */
+/* $gb-dm-light-purple: #F075B7; */
+/* $gb-dm-light-aqua: #6BE6E6; */
+/* $gb-dm-light-orange: #F075B7; */
+/* $gb-dm-light-gray: #f9cec3; */
+
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Source Code Pro for Powerline", "Font Awesome 5 Free", monospace;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: #16161c;
+  color: #fdf0ed;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  background: transparent;
+  color: #fdf0ed;
+  border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+  background: #181818;
+  border-bottom: 2px solid #F075B7;
+}
+
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-keyboard_layout,
+#custom-arch,
+#mpd {
+  padding: 0 8px;
+  margin: 0;
+}
+
+#window {
+  padding: 0 10px;
+}
+
+#clock {
+  background-color: #16161c;
+}
+
+#network {
+  border-bottom: 2px solid #EE64AE;
+}
+
+#pulseaudio {
+  border-bottom: 2px solid #3FC6DE;
+}
+
+#idle_inhibitor{
+  border-bottom: 2px solid #E95678;
+}
+
+#idle_inhibitor.activated {
+  background-color: #EC6A88;
+  color: white;
+}
+
+#custom-keyboard_layout {
+  border-bottom: 2px solid #6BE6E6;
+}
+
+#custom-arch {
+  color: white;
+  background: #e91e63;
+}
+
+@keyframes blink {
+  to {
+    background-color: #26A65B;
+    color: #EC6A88;
+  }
+}
+
+#battery {
+  background-color: #29D398;
+  color: #16161c;
+}
+
+#battery.full {
+  background-color: transparent;
+  color: #3FDAA4;
+}
+
+#battery.discharging {
+  color: #16161c;
+  background-color: #FAB795;
+}
+
+#battery.charging {
+  background-color: #29D398;
+  color: #16161c;
+}
+
+
+#battery.warning:not(.charging) {
+  background: #E95678;
+  color: #26A65B;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

@@ -45,7 +45,6 @@ EOPLUGINS
   #zgen load trapd00r/zsh-syntax-highlighting-filetypes
 
   zgen load mafredri/zsh-async
-  zgen load denysdovhan/spaceship-prompt #$b sindresorhus/pure
 
   # generate the init script from plugins above
   zgen save
@@ -112,3 +111,10 @@ fi
 ###-tns-completion-end-###
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# start sway
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    XKB_DEFAULT_LAYOUT=us exec sway
+fi
+
+eval "$(starship init zsh)"

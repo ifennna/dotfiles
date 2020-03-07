@@ -1,0 +1,53 @@
+* {
+  font: "Input 10";
+  background-color: #16161c;
+  //border-color: #1A1C23;
+  text-color: #fdf0ed;
+  spacing: 0;
+  width: 512px;
+}
+
+window {
+   anchor: north;
+   location: north;
+   y-offset: 10%;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+  children: [entry];
+}
+
+prompt {
+  padding: 16px;
+  border: 0 1px 0 0;
+}
+
+textbox {
+  background-color: #1A1C23;
+  border: 0 0 1px 0;
+  border-color: #16161c;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 16px;
+}
+
+listview {
+  dynamic: true;
+  fixed-height: false;
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+  border-radius: 5px;
+}
+
+element {
+  border: 0 0 1px 0;
+  padding: 16px;
+}
+
+element selected {
+  background-color: #1A1C23;
+}

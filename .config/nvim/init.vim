@@ -27,13 +27,6 @@ set noshowmode " dont need this since we have a statusline
 
 call plug#begin('~/.vim/plugs')
 
-" nord colorscheme, get their term colorscheme from 
-" https://github.com/arcticicestudio/nord-vim
-Plug 'rakr/vim-one'
-
-" nice status line
-Plug 'itchyny/lightline.vim'
-
 " denite
 Plug 'Shougo/denite.nvim'
 
@@ -42,6 +35,10 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " JavaScript Highlighting
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
+
+" Spacing and context
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Vue js syntax highlighting
 " Plug 'posva/vim-vue'
@@ -139,10 +136,31 @@ catch
   echo 'Denite not installed. It should work after running :PlugInstall'
 endtry
 
-" ligtline config
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
+" Configure Goyo and limelight
+let g:goyo_width = '80%'
+
+function! s:goyo_enter()
+  let b:quitting = 0
+  let b:quitting_bang = 0
+  autocmd QuitPre <buffer> let b:quitting = 1
+  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+endfunction
+
+function! s:goyo_leave()
+  " Quit Vim if this is the only remaining buffer
+  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    if b:quitting_bang
+      qa!
+    else
+      qa
+    endif
+  endif
+endfunction
+
+autocmd! User GoyoEnter call <SID>goyo_enter()
+autocmd! User GoyoLeave call <SID>goyo_leave()
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VISUAL CONFIG
@@ -155,10 +173,9 @@ set t_Co=256
 let g:one_allow_italics = 1
 
 " set colorscheme
-colorscheme one
-set background=dark
+colorscheme horizon
 
-set termguicolors
+"set termguicolors
 
 " set line numbers
 set relativenumber
@@ -170,6 +187,8 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 set smarttab
+
+source ~/.config/nvim/statusline.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY BINDINGS
