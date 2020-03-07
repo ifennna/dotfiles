@@ -1,0 +1,63 @@
+! special
+*.foreground:   #fdf0ed
+*.background:   #16161c
+*.cursorColor:  #fdf0ed
+
+! black
+*.color0:       #16161c
+*.color8:       #1a1c23
+
+! red
+*.color1:       #e95678
+*.color9:       #ec6a88
+
+! green
+*.color2:       #29d398
+*.color10:      #3fdaa4
+
+! yellow
+*.color3:       #fab795
+*.color11:      #fbc3a7
+
+! blue
+*.color4:       #59e3e3
+*.color12:      #6be6e6
+
+! magenta
+*.color5:       #ee64ae
+*.color13:      #f075b7
+
+! cyan
+*.color6:       #26bbd9
+*.color14:      #3fc6de
+
+! white
+*.color7:       #c0c5ce
+*.color15:      #eff1f5
+
+
+URxvt.urgentOnBell: true
+URxvt.scrollBar: false
+URxvt*font: xft:Input Mono:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono for Powerline:size=10:antialias=true:hinting=true
+URxvt*boldFont: xft:Input Mono:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono for Powerline:size=10:antialias=true:hinting=true
+!URxvt.depth: 24
+URxvt.matcher.button: 1
+URxvt.url-launcher: qutebrowser
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.letterSpace: -1
+URxvt.inputMethod: fcitx
+URxvt.preeditType: OverTheSpot
+
+
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Disable Ctrl-Alt-c & Ctrl-Alt-v bindings (optional)
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+! I dont know why, but I needed to use hex keysym values to get it to work
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
