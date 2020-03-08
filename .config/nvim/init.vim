@@ -27,6 +27,12 @@ set noshowmode " dont need this since we have a statusline
 
 call plug#begin('~/.vim/plugs')
 
+"colors
+Plug 'ntk148v/vim-horizon'
+
+"statusline
+Plug 'itchyny/lightline.vim'
+
 " denite
 Plug 'Shougo/denite.nvim'
 
@@ -171,11 +177,13 @@ set t_Co=256
 
 " allow italics
 let g:one_allow_italics = 1
+let g:onedark_termcolors = 256
 
 " set colorscheme
 colorscheme horizon
+"colorscheme onedark
 
-"set termguicolors
+set termguicolors
 
 " set line numbers
 set relativenumber
@@ -188,7 +196,11 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
-source ~/.config/nvim/statusline.vim
+let g:lightline = {
+      \ 'colorscheme': 'horizon',
+      \ }
+
+"source ~/.config/nvim/statusline.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY BINDINGS

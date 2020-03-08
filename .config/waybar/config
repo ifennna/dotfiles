@@ -4,7 +4,7 @@
   "layer": "top",
     "modules-left": ["custom/arch","sway/workspaces", "sway/window"],
     "modules-center": ["tray"],
-    "modules-right": ["idle_inhibitor" ,"pulseaudio", "network", "custom/keyboard_layout" ,"battery", "clock"],
+    "modules-right": ["idle_inhibitor", "memory", "cpu", "pulseaudio", "network","battery", "clock"],
     "height": 25,
     "sway/window": {
       "max-length": 50
@@ -56,16 +56,16 @@
     "idle_inhibitor": {
       "format": "{icon}",
       "format-icons": {
-        "activated": "",
-        "deactivated": ""
+        "activated": "☕",
+        "deactivated": "😴"
       }
     },
     "pulseaudio": {
       "format": "{icon} {volume:2}%",
-      "format-muted": "",
+      "format-muted": "🔇",
       "format-icons": {
-        "headphones": "",
-        "default": ["", ""]
+        "headphones": "🎧",
+        "default": ["🔉", "🔊"]
       },
       "scroll-step": 1,
       "on-click": "pavucontrol"
@@ -79,11 +79,8 @@
         "critical": 35
       },
       "format": "{icon} {capacity}%",
-      "format-icons": ["", ""]
+      "format-icons": ["🔋", "🔋"]
       },
       "max-length": 25
     },
-    "custom/arch": {
-      "format": ""
-    }
 }

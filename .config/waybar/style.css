@@ -37,7 +37,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Source Code Pro for Powerline", "Font Awesome 5 Free", monospace;
+  font-family: "Fira Code", "Font Awesome 5 Free";
   font-size: 12px;
   min-height: 0;
 }
@@ -104,13 +104,12 @@ window#waybar {
   color: white;
 }
 
-#custom-keyboard_layout {
-  border-bottom: 2px solid #6BE6E6;
+#cpu {
+  border-bottom: 2px solid #26A65B;
 }
 
-#custom-arch {
-  color: white;
-  background: #e91e63;
+#memory {
+  border-bottom: 2px solid #6BE6E6;
 }
 
 @keyframes blink {
